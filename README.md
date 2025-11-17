@@ -1,37 +1,56 @@
-# PARA! - Modern Transport App
+# 📝 Changelog
 
-A Flutter-based jeepney transport app with real-time tracking, digital payments, and QR boarding system.
+## [COMMIT-10/15/2025-Leo]
+### Added
+- RoleRouter page to identify if the signed up account is a tsuperhero/pasahero.
+- Qrscanpage that handles camera and Qr logic.
+- Button redirects from signup_page and pasahero settings.
+- tsuperhero_signup_page for tsupers.
 
-![Para! App](assets/Paralogotemp.png)
+### Fixed 
+- Google Sign In.
+- Pasahero and Tsuperhero homes.
+- displayName on pasahero_home now shows first name.
+- New GoogleMaps API key
+- Scanning QR with already existing account while logged in now redirects to correct homepage.
 
-## 🚀 Features
-- 🚍 **Real-time Jeepney Tracking** - Live location of jeepneys on interactive maps
-- 💰 **Para! Coins System** - In-app currency for payments and rewards
-- 📱 **QR Code Boarding** - Scan to board jeepneys seamlessly
-- 🗺️ **Interactive Maps** - Google Maps integration with recenter functionality
-- 👥 **Dual Roles** - Passenger mode & Driver (Tsuperhero) mode
-- 💳 **Digital Payments** - Pay using coins, cash, or online payment
-- 📊 **Real-time Database** - Firebase integration for live updates
+### Known Issues
+- Firebase pop up "Blocked due to unusual activity" when false, preventing added verification pop up and redirect to work.
+- Tsuperhero_activation.dart.
+- Google Sign in.
+- Login page appears longer on real devices compared to emulator view — “Create Account” button partially off-screen.
 
-## 🛠️ Tech Stack
-- **Flutter** & **Dart** - Cross-platform framework
-- **Firebase** - Authentication, Firestore, Realtime Database
-- **Google Maps API** - Interactive mapping
-- **Geolocator** - Location services
-- **QR Code** - Boarding system
 
-## 📸 Screenshots
-*(Add screenshots later)*
+## [COMMIT-10/13/2025-Leo]
+### Added
+- Home pages now separated but logic and controller/map handling is now in a separate dart (Home->shared_home(scaffold), pasahero_home(Widgets), tsuperhero_home(Widgets))
 
-## 🚀 Getting Started
+### Fixed 
+- Google Sign In
 
-### Prerequisites
-- Flutter SDK
-- Android Studio / VS Code
-- Firebase Project
-- Google Maps API Key
+### Known Issues
+- Firebase pop up "Blocked due to unusual activity" when false, preventing added verification pop up and redirect to work.
+- Tsuperhero_activation.dart.
+- Google Sign in.
+- Login page appears longer on real devices compared to emulator view — “Create Account” button partially off-screen.
+- Google Maps not working on real device (probably devKey missing on my end).
+- displayName displayed on Home page not updating, possibly Firebase auth cache.
 
-### Installation
-1. Clone the repository
-```bash
-git clone https://github.com/YOUR_USERNAME/para-transport-app.git
+
+## [COMMIT-10/13/2025-Leo]
+### Added
+- Email verification popup during sign-up. Checks for verification in real-time and directs User to pasahero_home after.
+- Settings integration placeholder (Settings->settingspage(scaffold), PHsettings(Widgets), THsettings(Widgets))
+
+### Fixed 
+- Removed unnecessary lines of code from login.dart, signup_page2.dart
+- Arranged directories to keep workspace clean.
+
+### Known Issues
+- Firebase pop up "Blocked due to unusual activity" when false, preventing added verification pop up and redirect to work.
+- Tsuperhero_activation.dart.
+- Google Sign in.
+- Login page appears longer on real devices compared to emulator view — “Create Account” button partially off-screen.
+- Google Maps not working on real device (probably devKey missing on my end).
+
+
